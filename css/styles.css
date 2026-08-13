@@ -146,6 +146,10 @@ h1 {
   display: inline-block;
 }
 
+.mobile-lines {
+  display: none;
+}
+
 .portfolio-link {
   margin-top: clamp(1rem, 2.5vh, 2rem);
   padding-bottom: 0.25em;
@@ -188,6 +192,8 @@ noscript {
   .page {
     min-height: 100dvh;
     padding: var(--edge);
+    padding-top: clamp(6.5rem, 13vh, 7.4rem);
+    padding-bottom: clamp(4rem, 10vh, 6rem);
   }
 
   .contact {
@@ -201,9 +207,18 @@ noscript {
   }
 
   .intro {
-    top: clamp(6.5rem, 13vh, 7.4rem);
-    right: var(--edge);
-    left: var(--edge);
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+  }
+
+  .desktop-lines {
+    display: none;
+  }
+
+  .mobile-lines {
+    display: block;
   }
 
   h1 {
@@ -220,8 +235,8 @@ noscript {
 
   .intro-copy p {
     margin-bottom: clamp(1.25rem, 3vh, 1.65rem);
-    font-size: clamp(0.94rem, 4.25vw, 1.06rem);
-    letter-spacing: 0.065em;
+    font-size: clamp(0.9rem, 3.9vw, 1rem);
+    letter-spacing: 0.05em;
     line-height: 1.18;
   }
 
@@ -231,9 +246,11 @@ noscript {
   }
 
   .artist-link {
-    right: var(--edge);
-    bottom: clamp(10.5rem, 23.5vh, 12rem);
-    left: var(--edge);
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: clamp(6.5rem, 15vh, 9rem);
     font-size: clamp(0.7rem, 3.1vw, 0.78rem);
   }
 
