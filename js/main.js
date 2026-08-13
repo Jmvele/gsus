@@ -7,10 +7,12 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 const mobileLayout = window.matchMedia("(max-width: 799px)").matches;
 
 document.querySelectorAll(mobileLayout ? ".mobile-lines" : ".desktop-lines").forEach((group) => {
+  group.hidden = false;
   group.removeAttribute("aria-hidden");
 });
 
 document.querySelectorAll(mobileLayout ? ".desktop-lines" : ".mobile-lines").forEach((group) => {
+  group.hidden = true;
   group.setAttribute("aria-hidden", "true");
 });
 
