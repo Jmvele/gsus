@@ -1,0 +1,248 @@
+:root {
+  --ink: #0b0908;
+  --edge: clamp(2rem, 3.75vw, 4.5rem);
+}
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  color: var(--ink);
+  background: #e6b572;
+  font-family: "Montserrat", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grain {
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  z-index: 2;
+  width: 200%;
+  height: 200vh;
+  background: transparent url("../assets/noise-transparent.png") repeat 0 0;
+  pointer-events: none;
+  animation: grain-shift 1.5s steps(6) infinite;
+  will-change: transform;
+}
+
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -5%); }
+  20% { transform: translate(-10%, 5%); }
+  30% { transform: translate(5%, -10%); }
+  40% { transform: translate(-5%, 15%); }
+  50% { transform: translate(-10%, 5%); }
+  60% { transform: translate(15%, 0); }
+  70% { transform: translate(0, 10%); }
+  80% { transform: translate(-15%, 0); }
+  90% { transform: translate(10%, 5%); }
+  100% { transform: translate(5%, 0); }
+}
+
+.page {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  min-height: 100svh;
+  padding: var(--edge);
+}
+
+.contact {
+  position: absolute;
+  top: clamp(3rem, 8.5vh, 6rem);
+  right: calc(var(--edge) + 4vw);
+  display: flex;
+  gap: clamp(2.4rem, 5vw, 5.5rem);
+  font-size: clamp(0.72rem, 0.92vw, 1rem);
+  font-weight: 600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.animated-link {
+  position: relative;
+  display: inline-block;
+  outline-offset: 0.35rem;
+}
+
+.animated-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.25em;
+  left: 0;
+  height: 0.12em;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animated-link:hover::after,
+.animated-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.intro {
+  position: absolute;
+  top: 21vh;
+  left: var(--edge);
+  
+}
+
+h1 {
+  max-width: 820px;
+  margin: 0 0 clamp(1.8rem, 4.2vh, 3rem);
+  font-size: clamp(2rem, 3vw, 3.65rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.intro-copy p {
+  margin: 0 0 clamp(1.15rem, 2.6vh, 1.9rem);
+  font-size: clamp(1rem, 1.32vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  line-height: 1.25;
+}
+
+.reveal-line {
+  display: block;
+  overflow: hidden;
+}
+
+.reveal-line > span,
+.reveal-line > a {
+  display: block;
+  will-change: transform, opacity;
+}
+
+.reveal-inline-block {
+  display: inline-block;
+}
+
+.portfolio-link {
+  margin-top: clamp(1rem, 2.5vh, 2rem);
+  padding-bottom: 0.25em;
+  font-size: clamp(1.35rem, 1.9vw, 2.2rem);
+  font-weight: 800;
+}
+
+.portfolio-link::after,
+.artist-link-target::after {
+  bottom: 0;
+}
+
+.artist-link {
+  position: absolute;
+  bottom: clamp(3.5rem, 13vh, 8rem);
+  left: var(--edge);
+  margin: 0;
+  font-size: clamp(0.82rem, 1vw, 1.1rem);
+  font-weight: 600;
+}
+
+.artist-link-target {
+  padding-bottom: 0.25em;
+  font-weight: 800;
+}
+
+noscript {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 799px) {
+  :root {
+    --edge: clamp(1.5rem, 6.4vw, 2rem);
+  }
+
+  .page {
+    min-height: 100dvh;
+    padding: var(--edge);
+  }
+
+  .contact {
+    top: clamp(1.9rem, 4.2vh, 2.4rem);
+    right: clamp(2rem, 8.5vw, 2.5rem);
+    font-size: 0.72rem;
+  }
+
+  .contact a:first-child {
+    display: none;
+  }
+
+  .intro {
+    top: clamp(6.5rem, 13vh, 7.4rem);
+    right: var(--edge);
+    left: var(--edge);
+  }
+
+  h1 {
+    max-width: 21rem;
+    margin-bottom: clamp(2.5rem, 5.5vh, 3rem);
+    font-size: clamp(1.9rem, 8.55vw, 2.15rem);
+    letter-spacing: -0.04em;
+    line-height: 1.14;
+  }
+
+  .intro-copy {
+    max-width: 21rem;
+  }
+
+  .intro-copy p {
+    margin-bottom: clamp(1.25rem, 3vh, 1.65rem);
+    font-size: clamp(0.94rem, 4.25vw, 1.06rem);
+    letter-spacing: 0.065em;
+    line-height: 1.18;
+  }
+
+  .portfolio-link {
+    margin-top: clamp(0.8rem, 2vh, 1.15rem);
+    font-size: clamp(1.35rem, 6.5vw, 1.55rem);
+  }
+
+  .artist-link {
+    right: var(--edge);
+    bottom: clamp(10.5rem, 23.5vh, 12rem);
+    left: var(--edge);
+    font-size: clamp(0.7rem, 3.1vw, 0.78rem);
+  }
+
+  .grain {
+    background-size: 400px 400px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-link::after { transition: none; }
+  .grain { animation: none; }
+}

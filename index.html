@@ -1,300 +1,54 @@
 <!doctype html>
-<html ontouchmove  lang="en">
+<html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Jesus Velez — associate creative director and independent animator in Toronto." />
     <title>Jesus Velez</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body onclick="">
-    <header>
-      <section id="top" class="hero">
-        <div class="overlay">
-          <img class ="overlay"src="assets/img/overlay.png" alt="overlay">
-          
+  <body>
+    <canvas class="background" data-background aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="page">
+      <nav class="contact" aria-label="Contact">
+        <a class="animated-link" href="mailto:jmvelez1293@gmail.com">jmvelez1293@gmail.com</a>
+        <a class="animated-link" href="https://www.instagram.com/gsus.velez/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile: gsus.velez">gsus.velez</a>
+      </nav>
+
+      <section class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">
+          <span class="reveal-line"><span>Hello, I’m Jesus, an ACD by day,</span></span>
+          <span class="reveal-line"><span>and an indie animator by night.</span></span>
+        </h1>
+
+        <div class="intro-copy">
+          <p>
+            <span class="reveal-line"><span>I’m based in Toronto, Canada, and I like</span></span>
+            <span class="reveal-line"><span>to describe myself as well rounded-creative.</span></span>
+          </p>
+          <p>
+            <span class="reveal-line"><span>If you want to check my professional work,</span></span>
+            <span class="reveal-line"><span>download my portfolio below.</span></span>
+          </p>
         </div>
-        <video autoplay loop muted
-          src="assets/vid/reel-teaser2.mp4"
-          poster="assets/img/portada.jpg"
-          width="720">
-        </video>
-        <img class="poster" src="assets/img/portada.jpg">
-       
+
+        <span class="reveal-line reveal-inline-block">
+          <a class="portfolio-link animated-link" href="./assets/Jesus_Velez-Portfolio_2026.pdf" target="_blank" rel="noopener">2026 Portfolio</a>
+        </span>
       </section>
-      <div id="navbar-gsus" class= "container-fluid">
-          <div  class="row mx-auto mt-5 mt-lg-0">
-              
-              <img class="logo mr-8" src="assets/img/logo_gsus.png" alt="logo" width="100px" height="100px">
-              <h1 class="mb-2" >Jesus Velez</h1>
-              
-            
-          </div>
-        
-          <div class=" mt-2">
-            <!-- <div class="row mt-5"> -->
-                <nav class="navbar   navbar-dark bg-dark fixed-topy pt-lg-5" >
-                    <!-- <a class="navbar-brand active" href="#">Home</a> -->
-                    <button class="navbar-toggler navbar-toggler-gsus mx-lg-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" id="home"href="#top">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="menu2" href="#Animation">Animation</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="menu3"  href="#Web">Web & UX/UI</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="menu4"  href="#Photography">Photography</a>
-                        </li>                         
-                        <!-- <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Photography
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Portrait</a>
-                            <a class="dropdown-item" href="#">Urban/Nature</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Product</a>
-                          </div>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link"  id="menu5" href="#Bio">BIO</a>
-                          </li> 
-                        <!-- <li class="nav-item">
-                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li> -->
-                      </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
-                         <button class="btn btn-outline-success mx-auto  my-lg-3 my-sm-0 " type="submit" > <a href="mailto:jmvelez1293@gmail.com" target="_blank">Contact </a></button>
-                      </form>
-                    </div>
-                </nav>
-                
-            <!-- </div> -->
-                  
-        </div>
-      </div>
-      <div class="container ">
-        <div class="row">
-          <a href="#work"><img class="arrow-gsus" id="arrow-gsus"src="assets/img/Artboard 1.png" alt="scrolldownarrow">
-          </a>
-          <div class="call"></div>
-        </div>  
-      </div>
-    </header>
-    <main>
-      <div>
-        <h2 id="work" class="pl-lg-5 pt-lg-5 py-4">Work</h2>
-      
-        <div class="container text-center embed-responsive embed-responsive-16by9 video-box" id="video">
-          <iframe src="https://player.vimeo.com/video/280142856?title=0&byline=0&portrait=0" width="960" height="540" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="section2 mt-2 py-lg-5">
-        <div class="container-fluid container-md">
 
-<!-- -----------------------------------------------------------ANIMATION---------------------------------------------- -->
-          <h2 id="Animation" class="pl-lg-5 pt-lg-5 py-4 text-center">Animation</h2>
-          <div class="row text-center">
-            <div class="col-sm-6 my-1 mx-0 pr-sm-1">
-              <div class="card__content">
-                <a href="https://www.youtube.com/embed/H1JYxfBbQgw"><div class="card__content-overlay" ></div> </a>
-                <img class="thumbnail" src="assets/img/trashsquad.jpg" alt="logo" width="320px" height="320px">
-                <!-- <iframe  class= "thumbnail" width="320" height="320" src="https://www.youtube.com/embed/H1JYxfBbQgw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>TRASH SQUAD<h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 mx-0 pl-sm-1">
-              <div class="card__content">
-                <a href="https://player.vimeo.com/video/430827341"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/flight.jpg" alt="logo" width="320px" height="320px">
-                <!-- <iframe  class="thumbnail" src="https://player.vimeo.com/video/430827341" width="320" height="320" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="background-color: black;"></iframe> -->
-                <div class="card__content-details card__fadeIn-top" >
-                  <h3>FLIGHT</h3>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="row text-center">
-            <div class="col-sm-12 my-1 text-center">
-              <div class="card__content">
-                <a href="https://www.youtube.com/embed/sBBGMpiLFok"><div class="card__content-overlay"></div> </a>
-                <img class="thumbnail" src="assets/img/rainfall.jpg" alt="logo" width="320px" height="320px">
-                <!-- <iframe class="thumbnail" width="320" height="320" src="https://www.youtube.com/embed/sBBGMpiLFok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>RAINFALL</h3>
-                </div> 
-              </div>
-            </div>
-          </div>
-          <div class="row text-center">
-            <div class="col-sm-6 my-1 pr-sm-1">
-              <div class="card__content">
-                <a href="https://www.youtube.com/embed/AdRYX4q6_tI"><div class="card__content-overlay"></div> </a>
-                <img class="thumbnail" src="assets/img/indeci.jpg" alt="logo" width="320px" height="320px">
-                <!-- <iframe class="thumbnail" width="320" height="320" src="https://www.youtube.com/embed/AdRYX4q6_tI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>INDECI<h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 pl-sm-1">
-              <div class="card__content">
-                <a href="https://www.youtube.com/embed/fN0MJN2CUeg"><div class="card__content-overlay"></div> </a>
-                <img class="thumbnail" src="assets/img/hiper.jpg" alt="logo" width="320px" height="320px">
-                <!-- <iframe  class="thumbnail"width="560" height="315" src="https://www.youtube.com/embed/fN0MJN2CUeg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>HIPER<h3>
-                </div> 
-              </div>
-            </div>
-
-          </div>
-<!-- -----------------------------------------------------------WEB UX/UI---------------------------------------------- -->
-          <h2 id="Web" class="pl-lg-5 pt-lg-5 py-4 text-center">Web & UX/UI</h2>
-          <div class="row text-center">
-            <div class="col-sm-6 my-1 pr-sm-1">
-              <div class="card__content">
-                <a href="https://houseofculturecanada.org/home" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/Hoc.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>HOUSE OF CULTURE<h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 pl-sm-1">
-              <div class="card__content">
-                <a href="https://jmvele.github.io/elpezmarcial/" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/elpez.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>THE MARTIAL FISH</h3>
-                </div> 
-              </div>
-            </div>
-            
-          </div>
-          <div class="row text-center">
-            <div class="col-sm-6 my-1 pr-sm-1">
-              <div class="card__content">
-                <a href="https://xd.adobe.com/view/f24549a9-e0d0-4d7e-6218-6ecffb1205d1-8474/" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/lvlup.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>Level Up<h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 pl-sm-1">
-              <div class="card__content">
-                <a href="https://jesusvelez.myportfolio.com/copia-de-design" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/finicky.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>Finicky Foodie</h3>
-                </div> 
-              </div>
-            </div>
-            
-          </div>
-
-<!-- -----------------------------------------------------------PHOTOGRAPHY---------------------------------------------- -->
-          <h2 id="Photography" class="pl-lg-5 pt-lg-5 py-4 text-center">Photography</h2>
-          <div class="row text-center">
-            <div class="col-sm-12 my-1">
-              <div class="card__content">
-                <a href="https://jesusvelez.myportfolio.com/nature-photography" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/Landscape.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>LANDSCAPE<h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 pr-sm-1">
-              <div class="card__content">
-                <a href="https://jesusvelez.myportfolio.com/portrait" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/Portrait 2.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>PORTRAIT</h3>
-                </div> 
-              </div>
-            </div>
-            <div class="col-sm-6 my-1 pl-sm-1">
-              <div class="card__content">
-                <a href="https://jesusvelez.myportfolio.com/product-photography" target="_blank"><div class="card__content-overlay"></div></a>
-                <img class="thumbnail" src="assets/img/Product 2.jpg" alt="logo" width="320px" height="320px">
-                <div class="card__content-details card__fadeIn-top">
-                  <h3>PRODUCT</h3>
-                </div> 
-              </div>
-            </div>
-            
-          </div>
-          
-          
-          
-            
-            
-          
-        </div>
-
-        
-      </div>
-
-<!-- ------------------------------------------------------BIO------------------------------------------- -->
-      <div class="section3 mt-2 py-5">
-        <h2 id="Bio" class="pl-lg-5 pt-lg-5 py-4">BIO</h2>
-        <div class="container">
-         <div class="row ">
-          <div class="col-sm-6 my-1 text-center">
-            <img class="thumbnail" src="assets/img/myself.jpg" alt="logo" width="540px" height="auto">
-          </div>
-
-            <div class="col-sm-6 my-1">
-              <p>Hi there. My name is Jesus, but you can call me “G-sus”. 
-                I believe we live in a wonderful moment in time that allows for the integration of art and technology. The tech-art wave has come to stay and, somehow, I ended up in the middle of it.</p><p> With a background in different skills from film, animation, design and coding,  I’m glad it’s hard to pigeonhole myself. Looking beyond the craft, is the magic behind the theatrical film, the amazement of handling a new mobile gadget and the laughs shared in a virtual space. I love to make people wonder beyond the surface. And hopefully, make this journey a little more fun. </p>
-                <a href="https://www.instagram.com/gsus.velez/" target="_blank"><h3 class="text-right ">@Gsus.</h3>
-                </a>
-            </div>
-          </div>
-         </div>
-      </div>
-      
+      <p class="artist-link">
+        <span class="reveal-line"><span>Check out my artist work <a class="animated-link artist-link-target" href="https://www.instagram.com/gsus.velez/" target="_blank" rel="noopener noreferrer">here.</a></span></span>
+      </p>
     </main>
 
-    <footer class="py-5">
-      <aside class="container text-center">
-          <span class="copyright ">©2020 GSUS</span>
-      </aside>
-      
-  </footer>
-    
-
-    <!-- Optional JavaScript -->
-   
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <!-- <script src="assets/canvas/juanrunning.js"></script> -->
-    <script src="assets/scripts.js"></script>
-  </body >
+    <noscript>This page needs JavaScript to render its animated background.</noscript>
+    <script type="module" src="./js/main.js"></script>
+  </body>
 </html>
